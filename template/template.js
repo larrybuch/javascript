@@ -1,4 +1,4 @@
-$(funciton() {
+$(function() {
 
 
 });
