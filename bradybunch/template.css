@@ -1,0 +1,21 @@
+.blue {
+	background-color: blue;
+	color: #fff;
+}
+
+.red {
+	background-color: red;
+	color: #fff;
+}
+
+.box {
+	background-color: #eee;
+	height: 280px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.box input {
+	margin: 120px;
+}

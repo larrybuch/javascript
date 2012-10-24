@@ -9,7 +9,7 @@ body {
 	background: #ddd;
 }
 
-#balance {
+#balance1, #balance2 {
 	background-color: white;
 	padding:20px;
 	font-size: 50px;
@@ -34,7 +34,7 @@ span {
 	text-align: center;
 }
 
-#container {
+#container1, #container2 {
 	width: 500px;
 	margin: auto;
 	background: white;
