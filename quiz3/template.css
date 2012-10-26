@@ -1,0 +1,21 @@
+#add_colors {
+	float:left;
+	margin-right: 20px;
+}
+
+.color {
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+}
+
+#hover {
+	width:200px;
+	height:400px;
+	float:left;
+	border: 1px solid black;
+	padding: 20px;
+}
+.clear {
+	clear:both;
+}

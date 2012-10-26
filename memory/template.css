@@ -1,0 +1,27 @@
+#container{
+	width: 600px;
+	margin: auto;
+}
+
+header {
+	font-size: 50px;	
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.card {
+	width: 100px;
+	height:100px;
+	background: red;
+	float: left;
+	margin:10px;
+	text-align: center;
+}
+
+.selected {
+	background: green;
+}
+
+.match {
+	background: blue;
+}

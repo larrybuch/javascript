@@ -1,0 +1,29 @@
+#container{
+	width: 900px;
+	margin: 0 auto;
+}
+
+#input {
+	margin:auto;	
+	width:600px;
+	height:26px;
+	font-size: 18px;
+	border-radius: 5px;
+}
+
+input[type="button"] {
+	padding:10px;
+	height:26px;
+	width:100px;
+}
+
+.box {
+	width: 60px;
+	height: 60px;
+	background: red;
+	margin: 20px;
+}
+
+.border {
+	border: 4px solid black;
+}
