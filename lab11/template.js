@@ -1,79 +1,40 @@
-/*
+var Dog;
 
-Search Flickr
-Get Results
-Add timer ... ?
-
-*/
-
-var i;
-
-$(function() {
-
-	$('#add').click(search_flickr);
-
+$(function(){
+	Parse.initialize("Alqxa4eFsAPKFoOmKYaL5gQvxqjEUbqTtVOaNZYA", "TXTwczbO1XGA8X3n0g0Xqc8c12ukdZUKsbEwLQ0W");
+	Dog = Parse.Object.extend("Dog");
+	$('#b1').click(save_data);
+	$('#b2').click(get_data);
 });
 
-function search_flickr(){	
-	//get text out of text box
-	var search = $('#search').val();
-	$.getJSON('http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=7fd76f4cd36a0c263664af8c0c0741e7&text=' + search + '&per_page=10&page=&format=json&jsoncallback=?', flickrResults);
+function save_data () {
+	var d1 = new Dog();
+	var name = $('#t1').val();
+	var age = $('#t2').val();
+
+	d1.save({dog_name: name, dog_age: age}, { success: show_success });
 }
 
-function flickrResults (data) {
-	$.each(data.photos.photo, getPhoto);
-	i = setInterval(getPhoto, 100);
+function show_success () {
+	console.log('data saved to parse!')
 }
 
-function display_more () {
-	
+function get_data () {
+	var query = new Parse.Query(Dog);
+		query.ascending("dog_name");
+		query.find({
+			success: function(results){
+				for(var i = 0; i < results.length; i++){
+					var p = $('<p>');
+					var name = results[i].get('dog_name');
+					var age = results[i].get('dog_age');
+					p.text(name + ' ' + age);
+					$('#data').prepend(p);
+
+				}
+
+			},
+			error: function(error){}
+		})
+
 }
-
-function getPhoto (index, item) {
-	var src = "http://farm"+ item.farm +".static.flickr.com/"+ item.server +"/"+ item.id +"_"+ item.secret +"_m.jpg";
-	var div = $('<div>');
-		div.addClass('photo');
-	var img = $('<img>');
-		//adding variable src into img src
-		img.attr('src', src);
-		div.prepend(img);
-		$('#photos').prepend(div);
-}
-
-
-
-
-
-//Get Photos
-//Start Counter and add photo every second
-
-
-
-// var counter = 0;
-
-// $(function() {
-
-// 	//setTimeout(display_text, 3000);
-// 	setInterval(display_more, 10);
-
-// });
-
-// function display_more ()
-// {
-// 	var d = $('<div>');
-// 	$('#test').prepend(d);
-// 	d.addClass('funky');
-// 	counter++;
-
-// 	var color1 = counter % 256;	
-// 	var color2 = (counter * 5) % 256;
-// 	var color3 = (counter * counter) % 256;
-
-// 	var color_string = 'rgb('+ color1 +', '+ color2 +', '+ color3 +')';
-// 	d.css('background-color', color_string)
-// }
-
-// function display_text ()
-// {
-// 	$('#test').text('Hello World.')
-// }
