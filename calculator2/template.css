@@ -1,0 +1,54 @@
+body {
+	background: #ccc;
+}
+
+#container {
+	width: 253px;
+	margin:20px auto;
+	background: white;
+	padding:20px;
+	border-bottom: 4px solid black;
+	border-right:4px solid black;
+	border-radius: 5px;
+}
+
+.button {
+	height:50px;
+	width:50px;
+	background: #ddd;
+	margin:5px;
+	border-bottom: 4px solid black;
+	border-right: 4px solid black;
+	border-top:white;
+	border-left:white;
+	border-radius: 5px;
+	font-family: 'Days One', sans-serif;
+	font-size: 16px;
+	color: #666;
+}
+
+
+#bequ {
+	width:115px;
+}
+
+#answer {
+	width:203px;
+	background: #90f6f5;
+	padding: 20px;
+	margin: 5px;
+	text-align: right;
+	font-size: 20px;
+	border-radius: 5px;
+	font-family: 'Oxygen Mono', sans-serif;
+}
+
+header {
+	margin:5px;
+	text-align: center;
+	padding-bottom:10px;
+	font-family: 'Oxygen Mono', sans-serif;
+}
+
+
+/*;*/
