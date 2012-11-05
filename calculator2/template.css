@@ -27,6 +27,11 @@ body {
 	color: #666;
 }
 
+.button:hover {
+	background-color: red;
+	color: white;
+}
+
 
 #bequ {
 	width:115px;
@@ -41,6 +46,7 @@ body {
 	font-size: 20px;
 	border-radius: 5px;
 	font-family: 'Oxygen Mono', sans-serif;
+	height:20px;
 }
 
 header {

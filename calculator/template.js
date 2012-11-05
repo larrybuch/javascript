@@ -1,6 +1,5 @@
 $(function() {
 
-$('#add').click(add);
 $('#subtract').click(subtract);
 $('#divide').click(divide);
 $('#multiply').click(multiply);
